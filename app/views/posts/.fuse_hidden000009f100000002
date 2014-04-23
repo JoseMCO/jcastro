@@ -1,0 +1,12 @@
+<h1>Mis posts</h1>
+<%= link_to "Nueva entrada", new_post_path %>
+
+<table border="solid">
+	<tr> <th>Titulo</th>  <th>Texto</th>  </tr>
+	<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.title %></td>
+		<td><%= post.text %></td>
+	</tr>
+	<% end %>
+</table>
