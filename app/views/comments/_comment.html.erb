@@ -1,0 +1,19 @@
+<% if (!comment.commenter.blank?)%>
+<div class="comment">
+	<p>
+	  <strong><%= comment.commenter %></strong>
+	</p>
+	 
+	<p>
+	  <%= comment.body %>
+	</p>
+
+	<div class="commentOptions">
+		<p>
+		  <%= link_to 'Destroy Comment', [comment.post, comment],
+		               method: :delete,
+		               data: { confirm: 'Are you sure?' } %>
+		</p>
+	</div>
+</div>
+<%end%>
